@@ -52,3 +52,31 @@ void mergesort(int low, int high) { // Step 1
         j++; 
         k++; 
     }
+
+    while (i <= mid) { // Step 4.f
+        B[k] = arr[i]; 
+        i++; 
+        k++; 
+    }
+
+    // Step 5
+    for (int x = low; x <= high; x++) {
+        arr[x] = B[x]; // Step 5.a
+    }
+
+    
+}
+
+int main() {
+    input();  // Input the array
+    mergesort(0, n - 1);  // Call merge sort on the whole array
+
+    // Print the final sorted array
+    cout << "Sorted Array: ";
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
