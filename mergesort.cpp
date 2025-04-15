@@ -18,3 +18,11 @@ void input() {
         cin >> arr[i];
     }
 }
+
+// Create function to merge two sorted arrays
+void mergesort(int low, int high) { // Step 1
+    if (low >= high) {
+        return; // Step 1.a
+    }
+
+    int mid = (low + high) / 2; // Step 2
